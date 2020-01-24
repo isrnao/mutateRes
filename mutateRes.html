@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eel</title>
+    <style type="text/css">
+.cp_ipselect {
+  overflow: hidden;
+  width: 90%;
+  margin: 2em auto;
+  text-align: center;
+}
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+.cp_ipselect.cp_sl04 {
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid #da3c41;
+  border-radius: 5px;
+  background: #ffffff;
+}
+.cp_ipselect.cp_sl04::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.8em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #da3c41;
+  pointer-events: none;
+}
+.cp_ipselect.cp_sl04 select {
+  padding: 8px 38px 8px 8px;
+  color: #da3c41;
+}
+</style>
+</head>
+<body>
+<!-- FVLGNDVLAAAKVDKGKDDYRG -->
+<!-- ARNDCQEGHILKMFPSTWYV -->
+<div class="cp_ipselect cp_sl04">
+<script>
+//var array1 = new Array('F','V','L','G','N','D','V','L','A','A');
+const array1 = "FVLGNDVLAA"
+const array2 = "ARNDCQEGHILKMFPSTWYV"
+for (var i = 0; i < 10; i++) {
+h = "<select name='example'><option value='" + array1.charAt(i) + "' selected>" + parseInt(parseInt(i)+1) + " : " + array1.charAt(i) + "</option>";
+
+  for (var j = 0; j < 20; j++) {
+    h = h + "<option value='" + array2.charAt(j) + "'>" + array2.charAt(j) + "</option>";
+  }
+  h = h + "</select>"
+document.write (h)
+}
+//document.write ("</select>");
+</script>
+</div>
+
+<p><input type='submit' value='送信する'></p>
+</body>
+</html>
